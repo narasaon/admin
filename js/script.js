@@ -44,7 +44,11 @@ document.getElementById('sidebar-logout-btn').addEventListener('click', function
   // Konfirmasi logout
   const confirmed = confirm('Are you sure you want to log out?');
   if (confirmed) {
-    // Redirect ke halaman login (atau lakukan aksi logout lainnya)
-    window.location.href = '../../login.html';
+    // Hapus data di localStorage
+    localStorage.clear();
+    
+    // Redirect ke halaman login
+    window.location.href = 'https://narasaon.me/login';
   }
 });
+
